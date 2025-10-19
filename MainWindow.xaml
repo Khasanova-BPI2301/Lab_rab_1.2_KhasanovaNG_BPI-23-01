@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:L_R_1._2_Khasanova_BPI_23_01"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Человек: Доходы и Расходы" Height="500" Width="700" MinWidth="600" MinHeight="500">
+    
+    <Grid Margin="20">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="ФИО:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="fullNameBox" FontSize="14" Padding="4"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Возраст:"  VerticalAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="ageBox" FontSize="14" Padding="4"
+                  PreviewTextInput="NumberValidationTextBox"
+                 PreviewKeyDown="SpaceValidationTextBox"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Пол (М/Ж):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="genderBox" FontSize="14" Padding="4" MaxLength="1"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Годовой доход (руб):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="incomeBox" FontSize="14" Padding="4"
+                 PreviewTextInput="NumberValidationTextBox"
+                 PreviewKeyDown="SpaceValidationTextBox"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Годовой расход (руб):" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="expenseBox" FontSize="14" Padding="4"
+                 PreviewTextInput="NumberValidationTextBox"
+                 PreviewKeyDown="SpaceValidationTextBox"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Тип:"  VerticalAlignment="Center"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="personTypeBox" FontSize="14" Padding="4">
+            <ComboBoxItem Content="Дошкольник"/>
+            <ComboBoxItem Content="Школьник"/>
+            <ComboBoxItem Content="Студент"/>
+            <ComboBoxItem Content="Работающий"/>
+        </ComboBox>
+
+        <Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Content="Рассчитать"
+                FontSize="16" Click="CalculateButton_Click" Margin="0,0,120,0"/>
+
+
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="Результат:" VerticalAlignment="Center" FontSize="18" />
+        <TextBlock Grid.Row="9" Grid.Column="1" x:Name="resultText" FontSize="30"
+                   TextWrapping="Wrap" VerticalAlignment="Center"/>
     </Grid>
 </Window>
