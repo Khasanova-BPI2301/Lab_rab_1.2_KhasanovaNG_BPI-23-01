@@ -13,6 +13,9 @@ namespace L_R_1._2_Khasanova_BPI_23_01.Classes
         {
 
         }
-
+        public override string GetInfo()
+        {
+            return base.GetInfo() + " (Дошкольник)";
+        }
     }
 }
