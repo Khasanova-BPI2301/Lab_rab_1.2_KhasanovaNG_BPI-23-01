@@ -21,7 +21,20 @@ namespace L_R_1._2_Khasanova_BPI_23_01.Classes
             this.gender = gender;
             this.income = income;
             this.expense = expense;
-            
         }
+
+        public virtual double GetAverageIncome()
+        {
+            return income/12;
+        }
+        public virtual double GetAverageExpense()
+        {
+            return expense/12;
+        }
+        public virtual string GetInfo()
+        {
+            return $"ФИО: {fullName}, Возраст: {age}, Пол: {gender}";
+        }
+
     }
 }
