@@ -8,5 +8,14 @@ namespace L_R_1._2_Khasanova_BPI_23_01.Classes
 {
     public class Student : Person
     {
+        public Student(string fullName, int age, string gender, double income, double expense)
+            : base(fullName, age, gender, income, expense)
+        {
+
+        }
+        public override string GetInfo()
+        {
+            return base.GetInfo() + " (Студент)";
+        }
     }
 }
