@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace L_R_1._2_Khasanova_BPI_23_01.Classes
 {
-    public class Preschooler
+    public class Preschooler : Person
     {
+        public Preschooler(string fullName, int age, string gender, double income, double expense)
+            : base(fullName, age, gender, income, expense)
+        {
+
+        }
+
     }
 }
