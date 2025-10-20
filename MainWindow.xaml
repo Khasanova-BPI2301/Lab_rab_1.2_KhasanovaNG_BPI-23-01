@@ -64,7 +64,7 @@
 
 
         <TextBlock Grid.Row="9" Grid.Column="0" Text="Результат:" VerticalAlignment="Center" FontSize="18" />
-        <TextBlock Grid.Row="9" Grid.Column="1" x:Name="resultText" FontSize="30"
+        <TextBlock Grid.Row="9" Grid.Column="1" x:Name="resultText" FontSize="16"
                    TextWrapping="Wrap" VerticalAlignment="Center"/>
     </Grid>
 </Window>

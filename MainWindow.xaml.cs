@@ -97,7 +97,15 @@ namespace L_R_1._2_Khasanova_BPI_23_01
                     $"Средний доход в месяц: {avgIncome:F2} руб.\n" +
                     $"Средний расход в месяц: {avgExpense:F2} руб.";
             }
+            catch(FormatException)
+            {
+                resultText.Text = "Ошибка: проверьте правильность ввода чисел (возраст, доход, расход).";
 
+            }
+            catch(Exception ex)
+            {
+                resultText.Text = $"Ошибка: {ex.Message}";
+            }
         }
 
     }
